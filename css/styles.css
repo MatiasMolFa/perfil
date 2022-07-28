@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(52, 8, 61);
+    color: #ffff;
+}
+
+.brand span{
+    color: rosybrown;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.637);
+    padding: 2em;
+}
+
+.menu{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.menu .active{
+    color: rosybrown;
+}
+
+.menu a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+.menu li{
+    list-style: none;
+}
+
+ul li a:hover{
+    color: rosybrown;
+}
+
+/* Content */
+
+main{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-top: 2em;
+    padding: 2em;
+}
+
+.info-content p{
+    margin-top: 1em;
+}
+
+.button{
+    background: rosybrown;
+    color: #ffff;
+    padding: 10px 20px;
+    margin-top: 2em;
+    border-radius: 2em;
+    border: none;
+    cursor: pointer;
+
+}
+
+.button:hover:after{
+    transform: translate(0, 0);
+}
+
+button:hover{
+    border: 2px solid transparent;
+    color: indigo;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+button::after{
+    background-color: yellow;
+    border-radius: 3rem;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    transform :translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.perfil-img{
+    display: flex;
+    justify-content: space-evenly;
+    border: 7px solid rosybrown;
+    width: 20.5em;
+}
+
+.perfil-img img{
+    width: 20em;
+}
+
+/* About me */
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    width: 100vw;
+}
